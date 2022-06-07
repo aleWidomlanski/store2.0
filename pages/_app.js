@@ -1,4 +1,4 @@
-import DataProvider from '../components/DataContext'
+import {DataProvider} from '../components/DataContext'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {

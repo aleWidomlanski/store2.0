@@ -7,7 +7,7 @@ import { getItems } from '../services/items'
 
 export default function Home({ items }) {
   return (
-    <Layout>
+    <Layout title={'Home'}>
       <Menu />
       <Cart />
       <Cards items={items} />
@@ -16,7 +16,6 @@ export default function Home({ items }) {
 }
 
 export async function getStaticProps() {
-
   const items = await getItems()
 
   return {
