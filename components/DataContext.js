@@ -6,31 +6,52 @@ export const DataProvider = ({ children }) => {
 
     const [cart, setCart] = useState([])
 
+    const [openCart, setOpenCart] = useState(false)
+
     const addToCart = (productToAdd) => {
         const productFoundInCart = cart.find((e) => e.id === productToAdd.id)
 
         if (productFoundInCart) {
-            const quantityUpdated = cart.map((e)=> {
-                if(e.id === productFoundInCart.id) {
-                    e.quantity  = productFoundInCart.quantity + 1
+            const quantityUpdated = cart.map((e) => {
+                if (e.id === productFoundInCart.id) {
+                    e.quantity = productFoundInCart.quantity + 1
                 }
                 return e
             })
             setCart(quantityUpdated)
         } else {
-             const productAdd = {
-                 ...productToAdd,
-                 quantity: 1
-             }
+            const productAdd = {
+                ...productToAdd,
+                quantity: 1
+            }
             setCart([...cart, productAdd])
         }
     }
 
-    console.log(cart)
+    const quantityProductCart = cart.reduce((previus, current) => {
+        return previus + current.quantity;
+    }, 0)
+
+    const total = cart.reduce((previus, current) => {
+        return previus + (current.quantity * current.price);
+    }, 0)
+
+    const handleOpenCart = () => {
+        setOpenCart(true)
+    }
+
+    const handleCloseCart = () => {
+        setOpenCart(false)
+    }
+
 
     return (
         <DataContext.Provider value={{
-            addToCart
+            addToCart,
+            quantityProductCart,
+            total,
+            handleOpenCart,
+            handleCloseCart
         }}>
             {children}
         </DataContext.Provider>

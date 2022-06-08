@@ -1,7 +1,12 @@
+import { useContext } from "react";
+import { DataContext } from "../DataContext";
 
 export default function Cart() {
+
+    const { quantityProductCart, handleOpenCart } = useContext(DataContext)
+
     return (
-            <h5>Cart(0)</h5>
+        <button onClick={handleOpenCart}>Cart({quantityProductCart})</button>
     )
 }
 
