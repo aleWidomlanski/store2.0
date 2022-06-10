@@ -88,7 +88,7 @@ export const DataProvider = ({ children }) => {
             quantityProductItem,
             addToQuantityProduct,
             subtractToQuantityProduct,
-            deleteProduct
+            deleteProduct, 
         }}>
             {children}
         </DataContext.Provider>

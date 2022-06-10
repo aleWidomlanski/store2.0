@@ -6,7 +6,7 @@ export default function Detail({ item }) {
     return (
         <div className={styles.container}>
             <div className={styles.image}>
-                <Image src={item.photo} alt={item.title} width="125" height="125" />
+                {item.photo && <Image src={item.photo} alt={item.title} width="125" height="125" />}
             </div>
             <div className={styles.info}>
                 <h4 className={styles.title}>{item.title}</h4>

@@ -26,7 +26,7 @@ export default function CartItems({ item }) {
         <>
             <div className={styles.container}>
                 <div className={styles.img}>
-                    <Image src={item.photo} alt={item.title} width="100" height="100" />
+                    {item.photo && <Image src={item.photo} alt={item.title} width="100" height="100" />}
                 </div>
                 <h4 className={styles.title}>{item.title}</h4>
                 <div className={styles.info} >
