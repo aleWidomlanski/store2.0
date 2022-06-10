@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Layout({children, title}) {
+export default function Layout({ children, title }) {
     return (
         <>
             <Head>

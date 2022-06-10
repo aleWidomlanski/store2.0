@@ -1,10 +1,29 @@
-
 .container {
-    border: solid 1px rgb(79, 79, 79);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 5px;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  border-bottom: solid 1px grey;
+  padding: 30px;
+}
+
+.title {
+  font-size: 18px;
+}
+
+.price {
+  margin-top: -20px;
+  font-size: 16px;
+  background-color: rgb(151, 255, 168, 0.5);
+  padding: 5px;
+  text-align: center;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

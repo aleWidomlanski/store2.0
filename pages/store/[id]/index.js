@@ -4,14 +4,20 @@ import Menu from "../../../components/Menu";
 import Cart from "../../../components/Cart";
 import Total from "../../../components/Total"
 import Detail from "../../../components/Detail";
+import styles from '../[id]/IdDetail.module.css'
 
 
 export default function DetailPage({ item }) {
     return (
         <Layout title={'Detail'}>
-            <Menu />
-            <Cart />
-            <Total/>
+            <div className={styles.containerMenuCart}>
+                <div className={styles.menu}>
+                    <Menu />
+                </div>
+                <div className={styles.cart}>
+                    <Cart />
+                </div>
+            </div>
             <Detail item={item} />
         </Layout>
     )

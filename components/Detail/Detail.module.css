@@ -1,15 +1,47 @@
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  margin-top: 50px;
+}
+.title {
+  font-size: 24px;
 }
 
-.image {
-    width: 30%;
-    border: solid 1px green;
+.price {
+  margin-top: -20px;
+  font-size: 20px;
+  background-color: rgb(151, 255, 168, 0.5);
+  padding: 5px;
+  text-align: center;
 }
 
 .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  font-size: 16px;
+  width: 95%;
+  color: rgb(37, 37, 37);
+}
+
+/* @media (min-width: 920px) {
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .image {
+    width: 30%;
+    border: solid 1px green;
+  }
+
+  .info {
     width: 30%;
     border: solid 1px rgb(184, 179, 44);
+  }
 }
+ */

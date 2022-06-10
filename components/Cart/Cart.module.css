@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+}
+
+.cart {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.quantity {
+  background-color: rgb(151, 255, 168);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  font-size: 14px;
+  border-radius: 50px;
+}

@@ -1,29 +1,23 @@
-import { useContext } from "react"
-import { DataContext } from "../DataContext"
 import Image from "next/image"
 import Link from 'next/link'
+import ButtonAdd from "../ButtonAdd/ButtonAdd"
 import styles from '../Card/Card.module.css'
 
 
 
 export default function Card({ item }) {
-
-    const context = useContext(DataContext)
-
-    const addToCart = (item) => () => {
-        context.addToCart(item);
-    }
-
     return (
         <div className={styles.container}>
             <Link href={`http://localhost:3000/store/[id]`} as={`http://localhost:3000/store/${item.id}`}>
                 <a>
                     <Image src={item.image} alt={item.title} width="200" height="200" />
-                    <h4>{item.title}</h4>
-                    <h3>$ {item.price}</h3>
+                    <div className={styles.info}>
+                        <h4 className={styles.title}>{item.title}</h4>
+                        <h3 className={styles.price}>$ {item.price}</h3>
+                    </div>
                 </a>
             </Link>
-            <button onClick={addToCart(item)}>Add to Cart</button>
+            <ButtonAdd item={item} />
         </div>
     )
 }

@@ -108,6 +108,30 @@
   margin-left: 0.5rem;
 }
 
+.containerMenuCart {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  width: 50%;
+  padding: 10px;
+}
+
+.cart {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.banner {
+  width: 100%;
+  background-image: url("http://localhost:3000/img/muzza.jpg");
+  height: 250px;
+  background-size: cover;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

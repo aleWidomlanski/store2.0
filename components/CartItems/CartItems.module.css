@@ -1,0 +1,20 @@
+.containerMenuCart {
+  display: flex;
+  width: 100%;
+}
+
+.menu {
+  width: 50%;
+  padding: 10px;
+}
+
+.cart {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+}

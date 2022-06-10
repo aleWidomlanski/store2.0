@@ -3,22 +3,29 @@ import Layout from '../components/Layout'
 import Menu from '../components/Menu'
 import Cart from '../components/Cart'
 import Cards from '../components/Cards'
-import { getItems } from '../services/items'
-import Total from '../components/Total'
+import { getItemsBestSellers } from '../services/items'
+import styles from '../styles/Home.module.css'
 
 export default function Home({ items }) {
   return (
     <Layout title={'Home'}>
-      <Menu />
-      <Cart />
-      <Total />
+      <div className={styles.containerMenuCart}>
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+        <div className={styles.cart}>
+          <Cart />
+        </div>
+      </div>
+      <div className={styles.banner}></div>
+      <h1>Más vendidos</h1>
       <Cards items={items} />
     </Layout>
   )
 }
 
 export async function getStaticProps() {
-  const items = await getItems()
+  const items = await getItemsBestSellers()
 
   return {
     props: {

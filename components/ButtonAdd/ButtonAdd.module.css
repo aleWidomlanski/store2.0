@@ -1,0 +1,13 @@
+.buttonAdd {
+  background-color: rgb(151, 255, 168);
+  border: none;
+  padding: 10px;
+  width: 50%;
+}
+
+.buttonAdd:hover {
+  background-color: rgb(85, 211, 106);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
