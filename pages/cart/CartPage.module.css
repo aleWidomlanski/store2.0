@@ -14,3 +14,18 @@
   justify-content: flex-end;
   padding: 10px;
 }
+
+.cartSinProduct {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.cartItems {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

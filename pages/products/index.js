@@ -4,12 +4,12 @@ import Menu from "../../components/Menu"
 import Cart from "../../components/Cart"
 import Cards from "../../components/Cards"
 import { getItems } from "../../services/items"
-import styles from "../store/Store.module.css"
+import styles from '../products/Products.module.css'
 
 
-export default function Store({ items }) {
+export default function Products({ items }) {
     return (
-        <Layout title={'Store'}>
+        <Layout title={'Productos'}>
             <div className={styles.containerMenuCart}>
                 <div className={styles.menu}>
                     <Menu />
@@ -18,8 +18,8 @@ export default function Store({ items }) {
                     <Cart />
                 </div>
             </div>
-            <h1>Store</h1>
-            <Cards items={items} />
+            <h1>Productos</h1>
+            <Cards  items={items} />
         </Layout>
     )
 }

@@ -7,8 +7,8 @@ export default function Menu() {
             <Link href={'/'}>
                 <a className={styles.menu}>Home</a>
             </Link>
-            <Link href={'/store'}>
-                <a className={styles.menu}>Store</a>
+            <Link href={'/products'}>
+                <a className={styles.menu}>Products</a>
             </Link>
         </>
     )

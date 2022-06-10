@@ -1,3 +1,8 @@
 .menu {
   margin: 0px 10px 0px 0px;
 }
+
+
+.menu:hover {
+  border-bottom: rgb(85, 211, 106) solid 1px;
+}

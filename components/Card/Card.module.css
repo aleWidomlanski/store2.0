@@ -8,6 +8,13 @@
   padding: 30px;
 }
 
+.containerImg {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
 .title {
   font-size: 18px;
 }
@@ -26,4 +33,5 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }

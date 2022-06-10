@@ -5,6 +5,7 @@ import Cart from '../../components/Cart'
 import styles from './CartPage.module.css'
 import { useContext } from 'react'
 import { DataContext } from '../../components/DataContext'
+import Total from '../../components/Total'
 
 export default function CartPage() {
 
@@ -20,11 +21,17 @@ export default function CartPage() {
                     <Cart />
                 </div>
             </div>
-            {cart.length > 0 ? cart.map((item) => {
-                return (
-                    <CartItems key={item.id} item={item} />
-                )
-            }) : <h3>No se añadieron productos al carrito</h3>}
+            {cart.length> 0 && <h1>My Order</h1>}
+            <div className={styles.cartItems}>
+                {cart.length > 0 ? cart.map((item) => {
+                    return (
+                        <CartItems key={item.id} item={item} />
+                    )
+                }) : <div className={styles.cartSinProduct}>
+                    <h5>No se añadieron productos al carrito por el momento</h5>
+                </div>}
+                {cart.length > 0 && <Total />}
+            </div>
         </Layout>
     )
 }

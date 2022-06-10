@@ -1,0 +1,25 @@
+.container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.total {
+    font-size: 18px;
+    padding: 5px;
+}
+
+.continue {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(151, 255, 168, 0.5);
+    padding: 5px;
+    border: none;
+}
+
+.continue:hover {
+    cursor: pointer;
+    outline: none;
+}

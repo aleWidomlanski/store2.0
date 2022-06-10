@@ -2,7 +2,6 @@ import { getItemsParamsId, getItem } from "../../../services/items";
 import Layout from "../../../components/Layout"
 import Menu from "../../../components/Menu";
 import Cart from "../../../components/Cart";
-import Total from "../../../components/Total"
 import Detail from "../../../components/Detail";
 import styles from '../[id]/IdDetail.module.css'
 
