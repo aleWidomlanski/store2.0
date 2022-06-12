@@ -5,8 +5,17 @@ import Cart from '../components/Cart'
 import Cards from '../components/Cards'
 import { getItemsBestSellers } from '../services/items'
 import styles from '../styles/Home.module.css'
+import useDataFromLocal from '../hooks/useDataFromLocal'
+
 
 export default function Home({ items }) {
+
+
+
+  useDataFromLocal()
+
+  const nombre = 'Grupo4';
+
   return (
     <Layout title={'Home'}>
       <div className={styles.containerMenuCart}>
