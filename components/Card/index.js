@@ -6,6 +6,9 @@ import styles from '../Card/Card.module.css'
 
 
 export default function Card({ item }) {
+
+    console.log(item)
+
     return (
         <div className={styles.container}>
             <Link href={`http://localhost:3000/products/[id]`} as={`http://localhost:3000/products/${item.id}`}>

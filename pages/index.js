@@ -9,12 +9,10 @@ import useDataFromLocal from '../hooks/useDataFromLocal'
 
 
 export default function Home({ items }) {
-
-
+/* 
 
   useDataFromLocal()
-
-  const nombre = 'Grupo4';
+*/
 
   return (
     <Layout title={'Home'}>
@@ -38,7 +36,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      items
+        items
     }
-  }
+}
 }
